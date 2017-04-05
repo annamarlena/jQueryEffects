@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+  Demo and photos by Anna Marlena
+  December 2016 
+  Documentation for jQuery Slider Shock found at http://www.jqueryslidershock.com
+-->
+<html>
+<head>
+  <style>
+    body      { background-color: #000000;
+                font-family:      courier; }
+    header    { background-color: #000000;
+                color:            #A9A9A9;
+                font-size:        100%;
+                text-align:       center; }
+    main      { background-color: #ffffff;
+                padding:          20px 20px; 
+                display:          block; }
+    li        { text-align:       center;
+                list-style:       none; }
+    footer    { font-size:        80%;
+                text-align:       center;
+                padding:          20px;
+                background-color: #000000;
+                color:            #808080;
+                clear:            both; }
+    a         { text-decoration:  none;
+                color:            #c0c0c0; }
+    a:hover   { color:            orange; }  
+  </style>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Slider Shock Demo</title>  
+	<link rel='stylesheet' href='css/slider_multiple.css' />  
+</head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>jQuery Demo</h1>
+      </header>
+      <main>
+    <div id='my_carousel_ct' class='carousel-container'>  
+      <div id="my_carousel_1" class="carousel slide">
+        <!-- Carousel items -->
+        <div id="my_carousel_2" class="carousel-inner rs-slider">
+          <div class="item active">
+            <div class="ts_border">
+              <img src="demo/img/alcatraz.jpg" />
+              <div class="carousel-caption">
+                <h6>San Francisco Bay</h6>
+                  <p class="ts_txt">
+                    <p>Sailing past Alcatraz</p>
+                  </p>
+              </div>
+            </div>
+          </div>
+    <div class="item">
+            <div class="ts_border">
+              <img src="demo/img/iceLeaf.jpg" />
+              <div class="carousel-caption">
+                <h4>Leaf</h4>
+                  <p class="ts_txt">
+                    <p>Leaf Trapped in Ice </p>
+                  </p>
+              </div>
+            </div>
+          </div> 
+    <div class="item">
+            <div class="ts_border">
+              <img src="demo/img/oakLeaf.jpg" />
+              <div class="carousel-caption">
+                <h4>Oak Leaf</h4>
+                  <p class="ts_txt">
+                    <p>Autumn Oak Leaf</p>
+                  </p>
+              </div>
+            </div>
+          </div> 
+    <div class="item">
+            <div class="ts_border">
+              <img src="demo/img/thunder.jpg" />
+              <div class="carousel-caption">
+                <h4>Cat</h4>
+                  <p class="ts_txt">
+                    <p>Afternoon Catnap</p>
+                  </p>
+              </div>
+            </div>
+          </div>   
+    <div class="item">
+            <div class="ts_border">
+              <img src="demo/img/sunsetSilhouette.png" />
+              <div class="carousel-caption">
+                <h4>Sunset</h4>
+                  <p class="ts_txt">
+                    <p>Sunset Silhouette</p>
+                  </p>
+              </div>
+            </div>
+          </div> 
+        
+                                     
+        </div>      
+        <!-- Carousel nav -->
+        <a class="carousel-custom" href="#my_carousel_1" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-custom" href="#my_carousel_1" data-slide="next">&rsaquo;</a>
+      </div>  
+    </div>
+    <ul>
+      <li>
+        <a href="#" class="ts_refine_st" data-to="1" data-slideindex="0">
+            <img src="demo/img/alcatraz.jpg" height="60" width="100" />
+        </a>
+        <a href="#" class="ts_refine_st" data-to="1" data-slideindex="0">
+            <img src="demo/img/iceLeaf.jpg" height="60" width="100" />
+        </a>
+        <a href="#" class="ts_refine_st" data-to="1" data-slideindex="0">
+            <img src="demo/img/oakLeaf.jpg" height="60" width="100" />
+        </a>
+        <a href="#" class="ts_refine_st" data-to="1" data-slideindex="0">
+            <img src="demo/img/thunder.jpg" height="60" width="100" />
+        </a>
+        <a href="#" class="ts_refine_st" data-to="1" data-slideindex="0">
+            <img src="demo/img/sunsetSilhouette.png" height="60" width="100" />
+        </a>
+      </li>
+    </ul>
+      </main>
+      <footer>
+        <li>&copy; Anna Marlena Designs 2016</li>
+        <li>Documentation for "Slider Shock" can be found at <a href="http://www.jqueryslidershock.com">jQuery Slider Shock</a></li>
+        <li>Slider Shock tutorial at <a href="http://designshack.net/articles/javascript/40-awesome-jquery-plugins-you-need-to-check-out/">Design Shack</a></li>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.js'></script>
+    <script type='text/javascript' src='js/wpts_slider_multiple.js'></script>
+    <script>
+      jQuery(document).ready(function(e) {
+         jQuery('#my_carousel_ct').tsSlider({
+           thumbs:'bottom'
+          , width:'600'
+          , showText: false 
+          , autoplay:15000
+          , imgWidth: 100
+          , imgHeight: 100
+          , imgMarginTop: 0
+          , imgMarginLeft: 0
+          , squared: true 
+          , textSquarePosition: 3 
+          , textPosition: 'bottom'
+          , imgAlignment: 'Center'
+          , textColor: 'F00'
+          , skin: 'ts-border-19'
+          , arrows:'ts-arrow-1'
+          , sliderHeight: 400 
+          , effects: 'sliceH'
+          , titleBold: 'false'
+          , titleItalic: 'false'
+          , textBold: 'true' 
+          , textItalic: 'false' 
+          , textWidth: 90
+          , background_sld:'#FFF'
+          , background_caption:'#000'
+         });    
+      });
+    </script>
+
+</body>
+</html>
